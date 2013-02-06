@@ -4,6 +4,8 @@ namespace Irvyne\BlogBundle\Controller;
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 
 use Irvyne\BlogBundle\Entity\Article;
 use Irvyne\BlogBundle\Form\ArticleType;
@@ -17,153 +19,131 @@ class ArticleController extends Controller
     /**
      * Lists all Article entities.
      *
+     * @Template
      */
     public function indexAction()
     {
         $em = $this->getDoctrine()->getManager();
 
-        $entities = $em->getRepository('IrvyneBlogBundle:Article')->findAll();
+        $articles = $em->getRepository('IrvyneBlogBundle:Article')->findAll();
 
-        return $this->render('IrvyneBlogBundle:Article:index.html.twig', array(
-            'entities' => $entities,
-        ));
+        return array('entities' => $articles);
     }
 
     /**
      * Finds and displays a Article entity.
      *
+     * @ParamConverter("entity", class="IrvyneBlogBundle:Article", options={"slug" = "slug"})
+     * @Template
      */
-    public function showAction($id)
+    public function showAction(Article $article)
     {
-        $em = $this->getDoctrine()->getManager();
+        $deleteForm = $this->createDeleteForm($article->getId());
 
-        $entity = $em->getRepository('IrvyneBlogBundle:Article')->find($id);
-
-        if (!$entity) {
-            throw $this->createNotFoundException('Unable to find Article entity.');
-        }
-
-        $deleteForm = $this->createDeleteForm($id);
-
-        return $this->render('IrvyneBlogBundle:Article:show.html.twig', array(
-            'entity'      => $entity,
-            'delete_form' => $deleteForm->createView(),        ));
+        return array(
+            'entity'      => $article,
+            'delete_form' => $deleteForm->createView(),
+        );
     }
 
     /**
      * Displays a form to create a new Article entity.
      *
+     * @Template
      */
     public function newAction()
     {
-        $entity = new Article();
-        $form   = $this->createForm(new ArticleType(), $entity);
+        $article = new Article();
+        $form   = $this->createForm(new ArticleType(), $article);
 
-        return $this->render('IrvyneBlogBundle:Article:new.html.twig', array(
-            'entity' => $entity,
+        return array(
+            'entity' => $article,
             'form'   => $form->createView(),
-        ));
+        );
     }
 
     /**
      * Creates a new Article entity.
      *
+     * @Template("IrvyneBlogBundle:Article:new.html.twig")
      */
     public function createAction(Request $request)
     {
-        $entity  = new Article();
-        $form = $this->createForm(new ArticleType(), $entity);
+        $article  = new Article();
+        $form = $this->createForm(new ArticleType(), $article);
         $form->bind($request);
 
         if ($form->isValid()) {
             $em = $this->getDoctrine()->getManager();
-            //$entity->setLocale($this->getRequest()->getLocale());
-            $em->persist($entity);
+            $em->persist($article);
             $em->flush();
 
-            return $this->redirect($this->generateUrl('article_show', array('id' => $entity->getId())));
+            return $this->redirect($this->generateUrl('article_show', array('slug' => $article->getSlug())));
         }
 
-        return $this->render('IrvyneBlogBundle:Article:new.html.twig', array(
-            'entity' => $entity,
+        return array(
+            'entity' => $article,
             'form'   => $form->createView(),
-        ));
+        );
     }
 
     /**
      * Displays a form to edit an existing Article entity.
      *
+     * @Template
      */
-    public function editAction($id)
+    public function editAction(Article $article)
     {
-        $em = $this->getDoctrine()->getManager();
+        $editForm = $this->createForm(new ArticleType(), $article);
+        $deleteForm = $this->createDeleteForm($article->getId());
 
-        $entity = $em->getRepository('IrvyneBlogBundle:Article')->find($id);
-
-        if (!$entity) {
-            throw $this->createNotFoundException('Unable to find Article entity.');
-        }
-
-        $editForm = $this->createForm(new ArticleType(), $entity);
-        $deleteForm = $this->createDeleteForm($id);
-
-        return $this->render('IrvyneBlogBundle:Article:edit.html.twig', array(
-            'entity'      => $entity,
+        return array(
+            'entity'      => $article,
             'edit_form'   => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),
-        ));
+        );
     }
 
     /**
      * Edits an existing Article entity.
      *
+     * @Template("IrvyneBlogBundle:Article:edit.html.twig")
      */
-    public function updateAction(Request $request, $id)
+    public function updateAction(Request $request, Article $article)
     {
         $em = $this->getDoctrine()->getManager();
 
-        $entity = $em->getRepository('IrvyneBlogBundle:Article')->find($id);
-
-        if (!$entity) {
-            throw $this->createNotFoundException('Unable to find Article entity.');
-        }
-
-        $deleteForm = $this->createDeleteForm($id);
-        $editForm = $this->createForm(new ArticleType(), $entity);
+        $deleteForm = $this->createDeleteForm($article->getId());
+        $editForm = $this->createForm(new ArticleType(), $article);
         $editForm->bind($request);
 
         if ($editForm->isValid()) {
-            $em->persist($entity);
+            $em->persist($article);
             $em->flush();
 
-            return $this->redirect($this->generateUrl('article_edit', array('id' => $id)));
+            return $this->redirect($this->generateUrl('article_edit', array('id' => $article->getId())));
         }
 
-        return $this->render('IrvyneBlogBundle:Article:edit.html.twig', array(
-            'entity'      => $entity,
+        return array(
+            'entity'      => $article,
             'edit_form'   => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),
-        ));
+        );
     }
 
     /**
      * Deletes a Article entity.
      *
      */
-    public function deleteAction(Request $request, $id)
+    public function deleteAction(Request $request, Article $article)
     {
-        $form = $this->createDeleteForm($id);
+        $form = $this->createDeleteForm($article->getId());
         $form->bind($request);
 
         if ($form->isValid()) {
             $em = $this->getDoctrine()->getManager();
-            $entity = $em->getRepository('IrvyneBlogBundle:Article')->find($id);
 
-            if (!$entity) {
-                throw $this->createNotFoundException('Unable to find Article entity.');
-            }
-
-            $em->remove($entity);
+            $em->remove($article);
             $em->flush();
         }
 

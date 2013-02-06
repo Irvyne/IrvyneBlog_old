@@ -6,27 +6,25 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 
-class ArticleType extends AbstractType
+class CategoryType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('title')
-            ->add('public', null, array(
-                'required' => false,
-            ))
+            ->add('name')
+            ->add('parent')
         ;
     }
 
     public function setDefaultOptions(OptionsResolverInterface $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'Irvyne\BlogBundle\Entity\Article'
+            'data_class' => 'Irvyne\BlogBundle\Entity\Category'
         ));
     }
 
     public function getName()
     {
-        return 'irvyne_blogbundle_articletype';
+        return 'irvyne_blogbundle_categorytype';
     }
 }

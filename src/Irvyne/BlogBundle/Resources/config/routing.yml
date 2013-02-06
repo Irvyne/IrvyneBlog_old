@@ -2,6 +2,10 @@ IrvyneBlogBundle_article:
     resource: "@IrvyneBlogBundle/Resources/config/routing/article.yml"
     prefix: /
 
+IrvyneBlogBundle_category:
+    resource: "@IrvyneBlogBundle/Resources/config/routing/category.yml"
+    prefix: /
+
 irvyne_blog_homepage:
     pattern:  /hello/{name}
     defaults: { _controller: IrvyneBlogBundle:Default:index }
