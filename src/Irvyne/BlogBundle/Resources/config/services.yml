@@ -1,0 +1,7 @@
+parameters:
+#    irvyne_blog.example.class: Irvyne\BlogBundle\Example
+
+services:
+#    irvyne_blog.example:
+#        class: %irvyne_blog.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

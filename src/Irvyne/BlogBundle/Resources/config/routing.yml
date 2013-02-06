@@ -1,0 +1,7 @@
+IrvyneBlogBundle_article:
+    resource: "@IrvyneBlogBundle/Resources/config/routing/article.yml"
+    prefix: /
+
+irvyne_blog_homepage:
+    pattern:  /hello/{name}
+    defaults: { _controller: IrvyneBlogBundle:Default:index }

@@ -1,0 +1,7 @@
+parameters:
+#    irvyne_core.example.class: Irvyne\CoreBundle\Example
+
+services:
+#    irvyne_core.example:
+#        class: %irvyne_core.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
