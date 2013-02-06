@@ -124,11 +124,11 @@ class CategoryController extends Controller
             return $this->redirect($this->generateUrl('category_edit', array('id' => $category->getId())));
         }
 
-        return $this->render('IrvyneBlogBundle:Category:edit.html.twig', array(
+        return array(
             'entity'      => $category,
             'edit_form'   => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),
-        ));
+        );
     }
 
     /**
