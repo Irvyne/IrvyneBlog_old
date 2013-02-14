@@ -12,8 +12,14 @@ class ArticleType extends AbstractType
     {
         $builder
             ->add('title')
+            ->add('content')
+            ->add('categories', null, array(
+                'multiple'  => true,
+                'expanded'  => true,
+                'property'  => 'treeName',
+            ))
             ->add('public', null, array(
-                'required' => false,
+                'required'  => false,
             ))
         ;
     }

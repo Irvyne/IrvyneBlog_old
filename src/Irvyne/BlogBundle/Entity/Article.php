@@ -3,6 +3,7 @@
 namespace Irvyne\BlogBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection;
 use Gedmo\Mapping\Annotation as Gedmo;
 
 /**
@@ -30,6 +31,14 @@ class Article
      * @ORM\Column(name="title", type="string", length=255)
      */
     protected $title;
+
+    /**
+     * @var string
+     *
+     * @Gedmo\Translatable
+     * @ORM\Column(name="content", type="text")
+     */
+    protected $content;
 
     /**
      * @var string
@@ -63,6 +72,21 @@ class Article
      * @ORM\Column(name="updated_by", type="string", length=255, nullable=true)
      */
     protected $updatedBy;
+
+    /**
+     * @var ManyToMany
+     *
+     * @ORM\ManyToMany(targetEntity="Irvyne\BlogBundle\Entity\Category", cascade={"persist"})
+     */
+    protected $categories;
+
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->categories = new ArrayCollection();
+    }
 
     /**
      * Get id
@@ -187,5 +211,61 @@ class Article
     public function getUpdatedBy()
     {
         return $this->updatedBy;
+    }
+    
+    /**
+     * Add categories
+     *
+     * @param \Irvyne\BlogBundle\Entity\Category $categories
+     * @return Article
+     */
+    public function addCategorie(\Irvyne\BlogBundle\Entity\Category $categories)
+    {
+        $this->categories[] = $categories;
+    
+        return $this;
+    }
+
+    /**
+     * Remove categories
+     *
+     * @param \Irvyne\BlogBundle\Entity\Category $categories
+     */
+    public function removeCategorie(\Irvyne\BlogBundle\Entity\Category $categories)
+    {
+        $this->categories->removeElement($categories);
+    }
+
+    /**
+     * Get categories
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getCategories()
+    {
+        return $this->categories;
+    }
+
+    /**
+     * Set content
+     *
+     * @param string $content
+     * @return Article
+     */
+    public function setContent($content)
+    {
+        $this->content = $content;
+    
+        return $this;
+    }
+
+    /**
+     * Get content
+     *
+     * @return string 
+     */
+    public function getContent()
+    {
+        return $this->content;
     }
 }

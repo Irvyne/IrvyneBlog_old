@@ -132,6 +132,27 @@ class ArticleController extends Controller
     }
 
     /**
+     * Enabled/Disabled an existing Article entity.
+     *
+     */
+    public function enabledAction(Article $article, $boolean)
+    {
+        if($this->getRequest()->isXmlHttpRequest()) {
+            $em = $this->getDoctrine()->getManager();
+
+            if($article->getPublic() == $boolean) {
+                $article->setPublic($boolean);
+                $em->persist($article);
+                $em->flush();
+            }
+
+            return new \Symfony\Component\HttpFoundation\Response('Action Done');
+        } else {
+            throw \Symfony\Component\HttpKernel\Exception\HttpException();
+        }
+    }
+
+    /**
      * Deletes a Article entity.
      *
      */

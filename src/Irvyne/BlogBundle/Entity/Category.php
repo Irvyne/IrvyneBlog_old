@@ -296,6 +296,14 @@ class Category
         return $this->children;
     }
 
+    /**
+     * Get TreeName for Form display
+     */
+    public function getTreeName()
+    {
+        return str_repeat(html_entity_decode('-', ENT_QUOTES, 'UTF-8'), ($this->getLevel()) * 4) . html_entity_decode('&nbsp;', ENT_QUOTES, 'UTF-8') . $this->getName();
+    }
+
     public function __toString()
     {
         return $this->getName();
