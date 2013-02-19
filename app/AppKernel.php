@@ -30,6 +30,7 @@ class AppKernel extends Kernel
             new JMS\TranslationBundle\JMSTranslationBundle(), // not required, but recommended for better extraction
             new Mopa\Bundle\BootstrapBundle\MopaBootstrapBundle(),
             new Genemu\Bundle\FormBundle\GenemuFormBundle(),
+            new Trsteel\CkeditorBundle\TrsteelCkeditorBundle(),
             new Irvyne\CoreBundle\IrvyneCoreBundle(),
             new Irvyne\UserBundle\IrvyneUserBundle(),
             new Irvyne\BlogBundle\IrvyneBlogBundle(),

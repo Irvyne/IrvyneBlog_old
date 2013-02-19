@@ -1,3 +1,6 @@
+{% extends 'IrvyneBlogBundle::layout.html.twig' %}
+
+{% block blog_content %}
 <h1>Category creation</h1>
 
 <form action="{{ path('category_create') }}" method="post" {{ form_enctype(form) }}>
@@ -14,3 +17,4 @@
         </a>
     </li>
 </ul>
+{% endblock %}

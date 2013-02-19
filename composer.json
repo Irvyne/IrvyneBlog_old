@@ -29,7 +29,7 @@
         "jms/i18n-routing-bundle": "1.1.*@dev",
         "mopa/bootstrap-bundle": "dev-master",
         "leafo/lessphp": "dev-master",
-        "twitter/bootstrap": "dev-master",
+        "twitter/bootstrap": "v2.2.2",
         "genemu/form-bundle": "2.1.*@dev",
         "Trsteel/ckeditor-bundle": "dev-master"
     },

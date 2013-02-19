@@ -1,5 +1,5 @@
 {
-    "hash": "994894ea65160226d7af9a59b66598f2",
+    "hash": "1cd639838263b6988e58239bc659a1b8",
     "packages": [
         {
             "name": "Trsteel/ckeditor-bundle",
@@ -7,13 +7,13 @@
             "target-dir": "Trsteel/CkeditorBundle",
             "source": {
                 "type": "git",
-                "url": "https://github.com/trsteel88/TrsteelCkeditorBundle",
-                "reference": "5afce0eb14e2112010dd9a2b8ff3c5f8dd4dcc12"
+                "url": "https://github.com/trsteel88/TrsteelCkeditorBundle.git",
+                "reference": "5ba5b82a97721b33cdaeadb1e613d0a70c8d7dbb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/trsteel88/TrsteelCkeditorBundle/zipball/5afce0eb14e2112010dd9a2b8ff3c5f8dd4dcc12",
-                "reference": "5afce0eb14e2112010dd9a2b8ff3c5f8dd4dcc12",
+                "url": "https://api.github.com/repos/trsteel88/TrsteelCkeditorBundle/zipball/5ba5b82a97721b33cdaeadb1e613d0a70c8d7dbb",
+                "reference": "5ba5b82a97721b33cdaeadb1e613d0a70c8d7dbb",
                 "shasum": ""
             },
             "require": {
@@ -22,7 +22,7 @@
                 "symfony/framework-bundle": "2.*,<2.3",
                 "twig/twig": ">=1.1,<2.0-dev"
             },
-            "time": "2013-02-13 23:33:43",
+            "time": "2013-02-16 23:43:00",
             "type": "symfony-bundle",
             "autoload": {
                 "psr-0": {
@@ -490,13 +490,13 @@
             "target-dir": "FOS/UserBundle",
             "source": {
                 "type": "git",
-                "url": "https://github.com/FriendsOfSymfony/FOSUserBundle",
-                "reference": "f31a1fcc88b589f106d1a038c06dc946f33f5d0c"
+                "url": "https://github.com/FriendsOfSymfony/FOSUserBundle.git",
+                "reference": "1ba866579a83e96c7c92161e6425a94d30b1c561"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfSymfony/FOSUserBundle/zipball/f31a1fcc88b589f106d1a038c06dc946f33f5d0c",
-                "reference": "f31a1fcc88b589f106d1a038c06dc946f33f5d0c",
+                "url": "https://api.github.com/repos/FriendsOfSymfony/FOSUserBundle/zipball/1ba866579a83e96c7c92161e6425a94d30b1c561",
+                "reference": "1ba866579a83e96c7c92161e6425a94d30b1c561",
                 "shasum": ""
             },
             "require": {
@@ -512,12 +512,7 @@
                 "twig/twig": "*",
                 "willdurand/propel-typehintable-behavior": "dev-master"
             },
-            "suggest": {
-                "doctrine/couchdb-odm-bundle": "*",
-                "doctrine/doctrine-bundle": "*",
-                "doctrine/mongodb-odm-bundle": "*"
-            },
-            "time": "2013-02-12 09:03:30",
+            "time": "2013-02-19 01:52:18",
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
@@ -640,12 +635,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/genemu/GenemuFormBundle.git",
-                "reference": "a71b227d49878786df9feb2ef815b8c53e0ce073"
+                "reference": "111c3efcbd19fc15937231c13173489a3f624a37"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/genemu/GenemuFormBundle/zipball/a71b227d49878786df9feb2ef815b8c53e0ce073",
-                "reference": "a71b227d49878786df9feb2ef815b8c53e0ce073",
+                "url": "https://api.github.com/repos/genemu/GenemuFormBundle/zipball/111c3efcbd19fc15937231c13173489a3f624a37",
+                "reference": "111c3efcbd19fc15937231c13173489a3f624a37",
                 "shasum": ""
             },
             "require": {
@@ -667,7 +662,7 @@
                 "symfony/mongodb-odm-bundle": "2.*",
                 "symfony/twig-bridge": "2.*"
             },
-            "time": "2013-02-11 19:51:19",
+            "time": "2013-02-18 11:10:24",
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
@@ -772,7 +767,7 @@
                     "JMS\\AopBundle": ""
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "notification-url": "http://packagist.org/downloads/",
             "license": [
                 "Apache"
             ],
@@ -814,7 +809,7 @@
                     "CG\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "notification-url": "http://packagist.org/downloads/",
             "license": [
                 "Apache"
             ],
@@ -981,7 +976,7 @@
                     "Metadata\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "notification-url": "http://packagist.org/downloads/",
             "license": [
                 "Apache"
             ],
@@ -1150,13 +1145,13 @@
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/KnpLabs/knp-components",
-                "reference": "a1006249984aa4199b2a91289aca1aeca103e067"
+                "url": "https://github.com/KnpLabs/knp-components.git",
+                "reference": "1.2.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/KnpLabs/knp-components/zipball/a1006249984aa4199b2a91289aca1aeca103e067",
-                "reference": "a1006249984aa4199b2a91289aca1aeca103e067",
+                "url": "https://api.github.com/repos/KnpLabs/knp-components/zipball/1.2.1",
+                "reference": "1.2.1",
                 "shasum": ""
             },
             "require": {
@@ -1170,7 +1165,7 @@
                 "ruflin/Elastica": "to allow usage pagination with ElasticSearch Client",
                 "solarium/solarium": "to allow usage pagination with Solarium Client"
             },
-            "time": "2013-02-11 08:34:46",
+            "time": "2013-02-19 14:50:25",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -1330,13 +1325,13 @@
             "target-dir": "Knp/Bundle/PaginatorBundle",
             "source": {
                 "type": "git",
-                "url": "https://github.com/KnpLabs/KnpPaginatorBundle",
-                "reference": "9784c6610db43afcc058f847ad757e50d26d8cf4"
+                "url": "https://github.com/KnpLabs/KnpPaginatorBundle.git",
+                "reference": "v2.3.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/KnpLabs/KnpPaginatorBundle/zipball/9784c6610db43afcc058f847ad757e50d26d8cf4",
-                "reference": "9784c6610db43afcc058f847ad757e50d26d8cf4",
+                "url": "https://api.github.com/repos/KnpLabs/KnpPaginatorBundle/zipball/v2.3.2",
+                "reference": "v2.3.2",
                 "shasum": ""
             },
             "require": {
@@ -1345,7 +1340,7 @@
                 "symfony/framework-bundle": ">=2.0,<3.0",
                 "twig/twig": ">=1.5,<2.0"
             },
-            "time": "2013-02-07 20:21:12",
+            "time": "2013-02-18 17:29:20",
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
@@ -1388,13 +1383,13 @@
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "http://github.com/kriswallsmith/assetic.git",
-                "reference": "504c9e8a6357583c20c9d9967ec2febea3157324"
+                "url": "https://github.com/kriswallsmith/assetic.git",
+                "reference": "v1.1.0-alpha3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kriswallsmith/assetic/zipball/504c9e8a6357583c20c9d9967ec2febea3157324",
-                "reference": "504c9e8a6357583c20c9d9967ec2febea3157324",
+                "url": "https://api.github.com/repos/kriswallsmith/assetic/zipball/v1.1.0-alpha3",
+                "reference": "v1.1.0-alpha3",
                 "shasum": ""
             },
             "require": {
@@ -1420,7 +1415,7 @@
                 "ptachoire/cssembed": "Assetic provides the integration with phpcssembed to embed data uris",
                 "twig/twig": "Assetic provides the integration with the Twig templating engine"
             },
-            "time": "2013-02-11 18:18:06",
+            "time": "2013-02-18 16:17:57",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -1505,7 +1500,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/Seldaek/monolog/zipball/1.2.1",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/1.2.1",
                 "reference": "1.2.1",
                 "shasum": ""
             },
@@ -1520,7 +1515,7 @@
                 "ext-mongo": "Allow sending log messages to a MongoDB server",
                 "mlehner/gelf-php": "Allow sending log messages to a GrayLog2 server"
             },
-            "time": "2012-08-29 04:53:20",
+            "time": "2012-08-29 11:53:20",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -1532,7 +1527,7 @@
                     "Monolog": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "notification-url": "http://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -1558,12 +1553,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phiamo/MopaBootstrapBundle.git",
-                "reference": "3dc43ada9f78611def581055e9ca9eca60e30ced"
+                "reference": "9a9a827260caacfcec0efa1b1a7f3bcacbf0b82a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phiamo/MopaBootstrapBundle/zipball/3dc43ada9f78611def581055e9ca9eca60e30ced",
-                "reference": "3dc43ada9f78611def581055e9ca9eca60e30ced",
+                "url": "https://api.github.com/repos/phiamo/MopaBootstrapBundle/zipball/9a9a827260caacfcec0efa1b1a7f3bcacbf0b82a",
+                "reference": "9a9a827260caacfcec0efa1b1a7f3bcacbf0b82a",
                 "shasum": ""
             },
             "require": {
@@ -1577,7 +1572,7 @@
                 "knplabs/knp-paginator-bundle": "dev-master",
                 "twitter/bootstrap": "2.0.*"
             },
-            "time": "2013-02-14 09:23:58",
+            "time": "2013-02-19 13:11:50",
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
@@ -1750,20 +1745,20 @@
             "target-dir": "Sensio/Bundle/FrameworkExtraBundle",
             "source": {
                 "type": "git",
-                "url": "https://github.com/sensio/SensioFrameworkExtraBundle",
-                "reference": "v2.1.7"
+                "url": "https://github.com/sensio/SensioFrameworkExtraBundle.git",
+                "reference": "af47fde5bb3d5712be2bab4211e55a7cf92cf23d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sensio/SensioFrameworkExtraBundle/zipball/v2.1.7",
-                "reference": "v2.1.7",
+                "url": "https://api.github.com/repos/sensio/SensioFrameworkExtraBundle/zipball/af47fde5bb3d5712be2bab4211e55a7cf92cf23d",
+                "reference": "af47fde5bb3d5712be2bab4211e55a7cf92cf23d",
                 "shasum": ""
             },
             "require": {
                 "doctrine/common": ">=2.1,<2.4-dev",
                 "symfony/framework-bundle": "2.1.*"
             },
-            "time": "2013-01-04 17:06:26",
+            "time": "2013-02-19 08:31:32",
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
@@ -1930,7 +1925,7 @@
                     "lib/swift_required.php"
                 ]
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "notification-url": "http://packagist.org/downloads/",
             "license": [
                 "LGPL"
             ],
@@ -1956,13 +1951,13 @@
             "target-dir": "Symfony/Bundle/AsseticBundle",
             "source": {
                 "type": "git",
-                "url": "https://github.com/symfony/AsseticBundle",
-                "reference": "v2.1.1"
+                "url": "https://github.com/symfony/AsseticBundle.git",
+                "reference": "bc24734343cc6a77dc143d0cf80f33b5e18e4cc0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/AsseticBundle/zipball/v2.1.1",
-                "reference": "v2.1.1",
+                "url": "https://api.github.com/repos/symfony/AsseticBundle/zipball/bc24734343cc6a77dc143d0cf80f33b5e18e4cc0",
+                "reference": "bc24734343cc6a77dc143d0cf80f33b5e18e4cc0",
                 "shasum": ""
             },
             "require": {
@@ -1982,7 +1977,7 @@
             "suggest": {
                 "symfony/twig-bundle": ">=2.1.0,<2.3-dev"
             },
-            "time": "2013-01-31 17:56:17",
+            "time": "2013-02-18 16:21:03",
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
@@ -2132,13 +2127,13 @@
             "version": "2.1.x-dev",
             "source": {
                 "type": "git",
-                "url": "git://github.com/symfony/symfony.git",
-                "reference": "0209eb6c470b3f73d89b859b332c93875833e6d1"
+                "url": "https://github.com/symfony/symfony.git",
+                "reference": "50c3de3e89ae3743e90f678c7aeaedcfc04a433a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/0209eb6c470b3f73d89b859b332c93875833e6d1",
-                "reference": "0209eb6c470b3f73d89b859b332c93875833e6d1",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/50c3de3e89ae3743e90f678c7aeaedcfc04a433a",
+                "reference": "50c3de3e89ae3743e90f678c7aeaedcfc04a433a",
                 "shasum": ""
             },
             "require": {
@@ -2187,7 +2182,7 @@
                 "monolog/monolog": ">=1.0,<1.3-dev",
                 "propel/propel1": "dev-master"
             },
-            "time": "2013-02-11 11:42:49",
+            "time": "2013-02-19 07:53:45",
             "type": "library",
             "autoload": {
                 "psr-0": {
@@ -2225,7 +2220,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/fabpot/Twig-extensions/archive/5c2d515d4624bdd588226d688173cf0399a4d8cf.zip",
+                "url": "https://api.github.com/repos/fabpot/Twig-extensions/zipball/5c2d515d4624bdd588226d688173cf0399a4d8cf",
                 "reference": "5c2d515d4624bdd588226d688173cf0399a4d8cf",
                 "shasum": ""
             },
@@ -2244,7 +2239,7 @@
                     "Twig_Extensions_": "lib/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "notification-url": "http://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -2267,19 +2262,19 @@
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "git://github.com/fabpot/Twig.git",
-                "reference": "72c8bb73e90cf6d2e992b01ab508f7fc13e38c8f"
+                "url": "https://github.com/fabpot/Twig.git",
+                "reference": "ac86c6368c8b1ed27adb436af54d0398b64cab1f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fabpot/Twig/zipball/72c8bb73e90cf6d2e992b01ab508f7fc13e38c8f",
-                "reference": "72c8bb73e90cf6d2e992b01ab508f7fc13e38c8f",
+                "url": "https://api.github.com/repos/fabpot/Twig/zipball/ac86c6368c8b1ed27adb436af54d0398b64cab1f",
+                "reference": "ac86c6368c8b1ed27adb436af54d0398b64cab1f",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.2.4"
             },
-            "time": "2013-02-09 18:37:02",
+            "time": "2013-02-17 19:51:08",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -2313,19 +2308,20 @@
         },
         {
             "name": "twitter/bootstrap",
-            "version": "dev-master",
+            "version": "v2.2.2",
+            "target-dir": "twitter/bootstrap",
             "source": {
                 "type": "git",
                 "url": "git://github.com/twitter/bootstrap.git",
-                "reference": "v2.3.0"
+                "reference": "v2.2.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twitter/bootstrap/zipball/v2.3.0",
-                "reference": "v2.3.0",
+                "url": "https://github.com/twitter/bootstrap/archive/v2.2.2.zip",
+                "reference": "v2.2.2",
                 "shasum": ""
             },
-            "time": "2013-02-08 06:13:13",
+            "time": "2012-12-08 20:57:21",
             "type": "library",
             "notification-url": "http://packagist.org/downloads/",
             "license": [
@@ -2356,7 +2352,6 @@
         "jms/i18n-routing-bundle": 20,
         "mopa/bootstrap-bundle": 20,
         "leafo/lessphp": 20,
-        "twitter/bootstrap": 20,
         "genemu/form-bundle": 20,
         "trsteel/ckeditor-bundle": 20
     }

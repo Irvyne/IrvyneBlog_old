@@ -150,6 +150,15 @@ mopa_bootstrap:
             analytics: 'UA-xxxxxxx-xx'
         diagnostic_mode: true
 
+# Trsteel CKeditor Configuration
+trsteel_ckeditor:
+    toolbar: ['document', 'clipboard', 'editing', '/', 'basicstyles', 'paragraph', 'links', '/', 'insert', 'styles', 'tools']
+    toolbar_groups:
+        document: ['Source', 'Code']
+    external_plugins:
+            syntaxhighlight:
+                path: bundles/irvynecore/js/ckeditor/plugins/syntaxhighlight-1.0
+
 # Services
 services:
     twig.text_extension:
