@@ -159,6 +159,21 @@ trsteel_ckeditor:
             syntaxhighlight:
                 path: bundles/irvynecore/js/ckeditor/plugins/syntaxhighlight-1.0
 
+#FMElfinder Configuration
+fm_elfinder:
+    locale: %locale%
+    editor: ckeditor # other choices are tinymce or simple
+    showhidden: false
+    connector:
+        debug: false # defaults to false
+        roots:       # at least one root must be defined
+            uploads:
+                driver: LocalFileSystem
+                path: uploads
+                upload_allow: ['image/png', 'image/jpg', 'image/jpeg']
+                upload_deny: ['all']
+                upload_max_size: 5M
+
 # Services
 services:
     twig.text_extension:

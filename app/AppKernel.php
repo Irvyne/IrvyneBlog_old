@@ -31,6 +31,7 @@ class AppKernel extends Kernel
             new Mopa\Bundle\BootstrapBundle\MopaBootstrapBundle(),
             new Genemu\Bundle\FormBundle\GenemuFormBundle(),
             new Trsteel\CkeditorBundle\TrsteelCkeditorBundle(),
+            new FM\ElfinderBundle\FMElfinderBundle(),
             new Irvyne\CoreBundle\IrvyneCoreBundle(),
             new Irvyne\UserBundle\IrvyneUserBundle(),
             new Irvyne\BlogBundle\IrvyneBlogBundle(),

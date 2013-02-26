@@ -1,6 +1,8 @@
 {% extends '::base.html.twig' %}
 
-{% block navbar %}{% endblock %}
+{% block navbar %}
+    {#{{ mopa_bootstrap_navbar('backendNavbar') }}#}
+{% endblock navbar %}
 
 {% block content %}
     <div class="span12">{% block blog_content %}{% endblock %}</div>

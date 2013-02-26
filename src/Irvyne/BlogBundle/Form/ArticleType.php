@@ -15,6 +15,7 @@ class ArticleType extends AbstractType
             ->add('content', 'ckeditor', array(
                 'width'     => '100%',
                 'height'    => '500',
+                'attr'     => array('fuck' => 'you'),
             ))
             ->add('categories', null, array(
                 'multiple'  => true,
