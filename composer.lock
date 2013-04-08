@@ -1,5 +1,9 @@
 {
-    "hash": "4c99adb68ac745eb15645570ae5e8595",
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
+    ],
+    "hash": "bea8d679e2cb0c95118d488c343277a1",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -602,9 +606,9 @@
                     "email": "roman@code-factory.org"
                 },
                 {
-                    "name": "Johannes Schmitt",
+                    "name": "Johannes M. Schmitt",
                     "email": "schmittjoh@gmail.com",
-                    "homepage": "https://github.com/schmittjoh",
+                    "homepage": "http://jmsyst.com",
                     "role": "Developer of wrapped JMSSerializerBundle"
                 }
             ],
@@ -1083,7 +1087,7 @@
                 {
                     "name": "Johannes M. Schmitt",
                     "email": "schmittjoh@gmail.com",
-                    "homepage": "https://github.com/schmittjoh",
+                    "homepage": "http://jmsyst.com",
                     "role": "Developer of wrapped JMSSerializerBundle"
                 }
             ],
@@ -1541,12 +1545,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/KnpLabs/KnpPaginatorBundle.git",
-                "reference": "8bd7f961d0ef8705c7ec12e7a1a0fce1f03e0207"
+                "reference": "6d93d89a3c913155d9d1778db4232db0e4d6f3e3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/KnpLabs/KnpPaginatorBundle/zipball/8bd7f961d0ef8705c7ec12e7a1a0fce1f03e0207",
-                "reference": "8bd7f961d0ef8705c7ec12e7a1a0fce1f03e0207",
+                "url": "https://api.github.com/repos/KnpLabs/KnpPaginatorBundle/zipball/6d93d89a3c913155d9d1778db4232db0e4d6f3e3",
+                "reference": "6d93d89a3c913155d9d1778db4232db0e4d6f3e3",
                 "shasum": ""
             },
             "require": {
@@ -1591,7 +1595,7 @@
                 "pagination",
                 "paginator"
             ],
-            "time": "2013-04-05 16:25:42"
+            "time": "2013-04-08 18:28:56"
         },
         {
             "name": "kriswallsmith/assetic",

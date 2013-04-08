@@ -15,7 +15,9 @@ parameters:
     mailer_user:        ~ #null
     mailer_password:    ~ #null
 
-    java_path:          ~ #C:\Program Files (x86)\Java\jre7\bin\java.exe
+    host_fr:            ~ #site_fr.dev
+    host_en:            ~ #site_en.dev
+    java_path:          ~ #C:\Program Files (x86)\Java\jre7\bin\java.exe OR /usr/bin/java
 
     locale:             ~ #fr
-    secret:             ThisTokenIsNotSoSecretChangeIt
+    secret:             ThisFuckingTokenIsNotSoSecretYouMustChangeIt^^

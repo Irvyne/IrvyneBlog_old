@@ -7,5 +7,5 @@
 /bin/
 /composer.phar
 
-app/config/parameters.yml # Parameters
-.idea/* # JetBrains PHPStorm
+/app/config/parameters.yml
+/.idea/*
