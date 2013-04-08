@@ -4,8 +4,4 @@ IrvyneBlogBundle_article:
 
 IrvyneBlogBundle_category:
     resource: "@IrvyneBlogBundle/Resources/config/routing/category.yml"
-    prefix: /admin
-
-irvyne_blog_homepage:
-    pattern:  /hello/{name}
-    defaults: { _controller: IrvyneBlogBundle:Default:index }
+    prefix: /

@@ -1,0 +1,17 @@
+{% import 'IrvyneCoreBundle::macros.html.twig' as macros_core %}
+
+<article class="span3">
+    <header>
+        <h2>{{ article.title }}</h2>
+    </header>
+        {% if article.summary is defined and article.summary is not null %}
+            {{ article.summary|raw }}
+        {% else %}
+            {{ article.content|raw|striptags }}
+        {% endif %}
+    <footer>
+        <p class="muted">
+            {{ macros_core.datetime(article.createdAt, app.request.locale, false, false, false, false, 'text-left') }}
+        </p>
+    </footer>
+</article>

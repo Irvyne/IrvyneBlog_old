@@ -36,18 +36,26 @@ class Article
      * @var string
      *
      * @Gedmo\Translatable
-     * @ORM\Column(name="content", type="text")
+     * @Gedmo\Slug(fields={"title"}, updatable=false)
+     * @ORM\Column(name="slug", type="string", length=255, unique=true)
      */
-    protected $content;
+    protected $slug;
 
     /**
      * @var string
      *
      * @Gedmo\Translatable
-     * @Gedmo\Slug(fields={"title"}, updatable=false)
-     * @ORM\Column(name="slug", type="string", length=255, unique=true)
+     * @ORM\Column(name="summary", type="text")
      */
-    protected $slug;
+    protected $summary;
+
+    /**
+     * @var string
+     *
+     * @Gedmo\Translatable
+     * @ORM\Column(name="content", type="text")
+     */
+    protected $content;
 
     /**
      * @var bool
@@ -74,11 +82,41 @@ class Article
     protected $updatedBy;
 
     /**
+     * @var datetime $created
+     *
+     * @Gedmo\Timestampable(on="create")
+     * @ORM\Column(type="datetime")
+     */
+    protected $createdAt;
+
+    /**
+     * @var datetime $updated
+     *
+     * @Gedmo\Timestampable(on="update")
+     * @ORM\Column(type="datetime")
+     */
+    protected $updatedAt;
+
+    /**
      * @var ManyToMany
      *
      * @ORM\ManyToMany(targetEntity="Irvyne\BlogBundle\Entity\Category", cascade={"persist"})
      */
     protected $categories;
+
+    /**
+     * @var ManyToMany
+     *
+     * @ORM\ManyToMany(targetEntity="Irvyne\BlogBundle\Entity\Tag", cascade={"persist"})
+     */
+    protected $tags;
+
+    /**
+     * @Gedmo\Locale
+     * Used locale to override Translation listener`s locale
+     * this is not a mapped field of entity metadata, just a simple property
+     */
+    private $locale;
 
     /**
      * Constructor
@@ -142,6 +180,29 @@ class Article
     public function getSlug()
     {
         return $this->slug;
+    }
+
+    /**
+     * Set summary
+     *
+     * @param string $summary
+     * @return Article
+     */
+    public function setSummary($summary)
+    {
+        $this->summary = $summary;
+
+        return $this;
+    }
+
+    /**
+     * Get summary
+     *
+     * @return string
+     */
+    public function getSummary()
+    {
+        return $this->summary;
     }
 
     /**
@@ -267,5 +328,95 @@ class Article
     public function getContent()
     {
         return $this->content;
+    }
+
+    /**
+     * Set createdAt
+     *
+     * @param \DateTime $createdAt
+     * @return Article
+     */
+    public function setCreatedAt($createdAt)
+    {
+        $this->createdAt = $createdAt;
+    
+        return $this;
+    }
+
+    /**
+     * Get createdAt
+     *
+     * @return \DateTime 
+     */
+    public function getCreatedAt()
+    {
+        return $this->createdAt;
+    }
+
+    /**
+     * Set updatedAt
+     *
+     * @param \DateTime $updatedAt
+     * @return Article
+     */
+    public function setUpdatedAt($updatedAt)
+    {
+        $this->updatedAt = $updatedAt;
+    
+        return $this;
+    }
+
+    /**
+     * Get updatedAt
+     *
+     * @return \DateTime 
+     */
+    public function getUpdatedAt()
+    {
+        return $this->updatedAt;
+    }
+
+    /**
+     * Add tags
+     *
+     * @param \Irvyne\BlogBundle\Entity\Tag $tags
+     * @return Article
+     */
+    public function addTag(\Irvyne\BlogBundle\Entity\Tag $tags)
+    {
+        $this->tags[] = $tags;
+    
+        return $this;
+    }
+
+    /**
+     * Remove tags
+     *
+     * @param \Irvyne\BlogBundle\Entity\Tag $tags
+     */
+    public function removeTag(\Irvyne\BlogBundle\Entity\Tag $tags)
+    {
+        $this->tags->removeElement($tags);
+    }
+
+    /**
+     * Get tags
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getTags()
+    {
+        return $this->tags;
+    }
+
+    /**
+     * Set locale
+     *
+     * @param string $locale
+     * @return string
+     */
+    public function setTranslatableLocale($locale)
+    {
+        $this->locale = $locale;
     }
 }

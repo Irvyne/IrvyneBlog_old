@@ -26,19 +26,19 @@ class AppKernel extends Kernel
             new FOS\UserBundle\FOSUserBundle(),
             new FOS\JsRoutingBundle\FOSJsRoutingBundle(),
             new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
-            new JMS\I18nRoutingBundle\JMSI18nRoutingBundle(),
-            new JMS\TranslationBundle\JMSTranslationBundle(), // not required, but recommended for better extraction
+            //new JMS\I18nRoutingBundle\JMSI18nRoutingBundle(),
+            //new JMS\TranslationBundle\JMSTranslationBundle(), // not required, but recommended for better extraction
             new Mopa\Bundle\BootstrapBundle\MopaBootstrapBundle(),
             new Genemu\Bundle\FormBundle\GenemuFormBundle(),
-            new Trsteel\CkeditorBundle\TrsteelCkeditorBundle(),
-            new FM\ElfinderBundle\FMElfinderBundle(),
+            new Ivory\CKEditorBundle\IvoryCKEditorBundle(),
+
             new Irvyne\CoreBundle\IrvyneCoreBundle(),
             new Irvyne\UserBundle\IrvyneUserBundle(),
             new Irvyne\BlogBundle\IrvyneBlogBundle(),
+            new Irvyne\CKEditorPluginBundle\IrvyneCKEditorPluginBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
-            $bundles[] = new Acme\DemoBundle\AcmeDemoBundle();
             $bundles[] = new Symfony\Bundle\WebProfilerBundle\WebProfilerBundle();
             $bundles[] = new Sensio\Bundle\DistributionBundle\SensioDistributionBundle();
             $bundles[] = new Sensio\Bundle\GeneratorBundle\SensioGeneratorBundle();

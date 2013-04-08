@@ -12,11 +12,8 @@ class ArticleType extends AbstractType
     {
         $builder
             ->add('title')
-            ->add('content', 'ckeditor', array(
-                'width'     => '100%',
-                'height'    => '500',
-                'attr'     => array('fuck' => 'you'),
-            ))
+            ->add('summary', 'ckeditor')
+            ->add('content', 'ckeditor')
             ->add('categories', null, array(
                 'multiple'  => true,
                 'expanded'  => true,

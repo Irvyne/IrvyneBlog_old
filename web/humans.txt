@@ -1,0 +1,19 @@
+# humanstxt.org/
+
+/* TEAM */
+    All work: Thibaud BARDIN
+    Site: http://thibaud-bardin.com
+    Twitter: @thibaud_bardin
+    Location: Paris, France
+
+/* THANKS */
+    ...
+
+/* SITE */
+    Last update: 2013/03/31
+    Twitter: @irvyne_
+    Language: English / French
+    Standards: HTML5, CSS3, ...
+    Components: Modernizr, jQuery, ...
+    Software: Symfony2
+    IDE: JetBrain PHPStorm

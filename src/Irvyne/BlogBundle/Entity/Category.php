@@ -42,6 +42,14 @@ class Category
     protected $slug;
 
     /**
+     * @var string
+     *
+     * @Gedmo\Translatable
+     * @ORM\Column(name="description", type="text")
+     */
+    protected $description;
+
+    /**
      * @var integer
      *
      * @Gedmo\TreeLeft
@@ -91,11 +99,6 @@ class Category
      * this is not a mapped field of entity metadata, just a simple property
      */
     private $locale;
-
-    public function setTranslatableLocale($locale)
-    {
-        $this->locale = $locale;
-    }
 
     /**
      * Get id
@@ -306,6 +309,40 @@ class Category
     public function getChildren()
     {
         return $this->children;
+    }
+
+    /**
+     * Set description
+     *
+     * @param string $description
+     * @return Category
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
+    
+        return $this;
+    }
+
+    /**
+     * Get description
+     *
+     * @return string 
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+    /**
+     * Set locale
+     *
+     * @param string $locale
+     * @return string
+     */
+    public function setTranslatableLocale($locale)
+    {
+        $this->locale = $locale;
     }
 
     /**

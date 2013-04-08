@@ -5,6 +5,7 @@
         filter='lessphp, cssrewrite, yui_css'
         output='css/main.css'
         '@MopaBootstrapBundle/Resources/public/less/mopabootstrapbundle.less'
+        '@MopaBootstrapBundle/Resources/public/less/eyecon-bootstrap-datepicker.less'
     %}
     <link href="{{ asset_url }}" type="text/css" rel="stylesheet" media="screen" />
     {% endstylesheets %}
@@ -29,6 +30,9 @@
         '@MopaBootstrapBundle/Resources/bootstrap/js/bootstrap-typeahead.js'
         '@MopaBootstrapBundle/Resources/public/js/mopabootstrap-collection.js'
         '@MopaBootstrapBundle/Resources/public/js/mopabootstrap-subnav.js'
+        '@MopaBootstrapBundle/Resources/public/js/html5bp_plugins.js'
+        '@MopaBootstrapBundle/Resources/public/js/html5bp_script.js'
+        '@MopaBootstrapBundle/Resources/public/js/eyecon-bootstrap-datepicker.js'
     %}
     <script type="text/javascript" src="{{ asset_url }}"></script>
     {% endjavascripts %}

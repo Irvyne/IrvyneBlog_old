@@ -13,10 +13,13 @@ monolog:
     handlers:
         main:
             type:  stream
-            path:  "%kernel.logs_dir%/%kernel.environment%.log"
+            path:  %kernel.logs_dir%/%kernel.environment%.log
             level: debug
         firephp:
             type:  firephp
+            level: info
+        chromephp:
+            type:  chromephp
             level: info
 
 assetic:
@@ -24,3 +27,9 @@ assetic:
 
 #swiftmailer:
 #    delivery_address: me@example.com
+
+services:
+    twig.extension.debug:
+        class: Twig_Extensions_Extension_Debug
+        tags:
+            - { name: twig.extension }

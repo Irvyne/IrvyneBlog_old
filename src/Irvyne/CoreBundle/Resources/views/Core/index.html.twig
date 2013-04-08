@@ -1,0 +1,11 @@
+{% extends '::base.html.twig' %}
+
+{% block navbar %}
+    {{ mopa_bootstrap_navbar('backendNavbar') }}
+{% endblock navbar %}
+
+{% block content %}
+    {% for article in articles %}
+        {% include "IrvyneBlogBundle:Article:single-homepage.html.twig" with { 'articles' : articles } %}
+    {% endfor %}
+{% endblock %}

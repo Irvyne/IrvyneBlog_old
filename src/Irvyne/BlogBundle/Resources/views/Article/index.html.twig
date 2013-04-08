@@ -1,28 +1,34 @@
 {% extends 'IrvyneBlogBundle::layout.html.twig' %}
 
+{% import 'IrvyneCoreBundle::macros.html.twig' as macros_core %}
+
 {% block blog_content %}
 <h1>Article list</h1>
 
-<table class="records_list">
+<table class="table">
     <thead>
         <tr>
-            <th>Id</th>
+            <th>#</th>
             <th>Title</th>
-            <th>Slug</th>
-            <th>Created by</th>
-            <th>Updated by</th>
+            <th>Summary</th>
+            <th>Created at</th>
+            <th>Updated at</th>
             <th>Public</th>
             <th>Actions</th>
         </tr>
     </thead>
     <tbody>
     {% for entity in entities %}
-        <tr>
+        {% if entity.public != true %}
+        <tr class="error">
+        {% else %}
+        <tr class="success">
+        {% endif %}
             <td><a href="{{ path('article_show', { 'slug': entity.slug }) }}">{{ entity.id }}</a></td>
             <td>{{ entity.title }}</td>
-            <td>{{ entity.slug }}</td>
-            <td>{{ entity.createdBy }}</td>
-            <td>{{ entity.updatedBy }}</td>
+            <td>{{ entity.summary|striptags }}</td>
+            <td>{{ macros_core.datetime(entity.createdAt, app.request.locale) }}</td>
+            <td>{{ macros_core.datetime(entity.updatedAt, app.request.locale) }}</td>
             <td>{% if entity.public == true %}YES{% else %}NO{% endif %}</td>
             <td>
                 <ul>

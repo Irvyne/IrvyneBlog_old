@@ -1,0 +1,50 @@
+{% macro datetime(customDate, lang, customDatetimeFormat, customDateFormat, customDateTimezone, id, class, raw) %}
+    {# Define DatetimeFormats #}
+    {% set DatetimeFormats = {
+    'ATOM': 'Y-m-d\TH:i:sP',
+    'COOKIE': 'l, d-M-y H:i:s T',
+    'ISO8601': 'Y-m-d\TH:i:sO',
+    'RFC822': 'D, d M y H:i:s O',
+    'RFC850': 'l, d-M-y H:i:s T',
+    'RFC1036': 'D, d M y H:i:s O',
+    'RFC1123': 'D, d M Y H:i:s O',
+    'RFC2822': 'D, d M Y H:i:s O',
+    'RFC3339': 'Y-m-d\TH:i:sP',
+    'RSS': 'D, d M Y H:i:s O',
+    'W3C': 'Y-m-d\TH:i:sP',
+    } %}
+    {# Define datetimeFormat #}
+    {% if customDatetimeFormat|default(false) %}
+        {% set datetimeFormat = DatetimeFormats[customDatetimeFormat] %}
+    {% else %}
+        {% set datetimeFormat = DatetimeFormats['ISO8601'] %}
+    {% endif %}
+    {# Define date #}
+    {% if customDate|default(false) %}
+        {% set date = customDate %}
+    {% else %}
+        {% set date = date() %}
+    {% endif %}
+    {# Define dateFormat #}
+    {% if customDateFormat|default(false) %}
+        {% set dateFormat = customDateFormat %}
+    {% else %}
+        {% if lang == 'fr' %}
+            {% set dateFormat = 'd/m/Y' %}
+        {% else %}
+            {% set dateFormat = 'Y-m-d' %}
+        {% endif %}
+    {% endif %}
+    {# Define dateTimezone #}
+    {% if customTimezone|default(false) %}
+        {% set dateTimezone = customTimezone %}
+    {% else %}
+        {% if lang == 'fr' %}
+            {% set dateTimezone = 'Europe/Paris' %}
+        {% else %}
+            {% set dateTimezone = 'America/New_York' %}
+        {% endif %}
+    {% endif %}
+
+    <time id="{{ id|default(false) ? id : '' }}" class="{{ class|default(false) ? class : '' }}" datetime="{{ date|date(datetimeFormat, dateTimezone) }}">{{ raw|default(false) ? date|raw : date|date(dateFormat, dateTimezone) }}</time>
+{% endmacro %}

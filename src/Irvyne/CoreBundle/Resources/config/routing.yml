@@ -1,3 +1,3 @@
 irvyne_core_homepage:
-    pattern:  /hello/{name}
-    defaults: { _controller: IrvyneCoreBundle:Default:index }
+    pattern:  /
+    defaults: { _controller: IrvyneCoreBundle:Core:index }
