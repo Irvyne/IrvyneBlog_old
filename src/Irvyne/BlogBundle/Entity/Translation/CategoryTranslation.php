@@ -7,7 +7,7 @@ use Gedmo\Translatable\Entity\MappedSuperclass\AbstractTranslation;
 
 /**
  * @ORM\Table(name="category_translations", indexes={
- *      @ORM\index(
+ *      @ORM\Index(
  *          name="category_translation_idx",
  *          columns={"locale", "object_class", "foreign_key", "field"}
  *      )
