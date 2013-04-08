@@ -32,6 +32,7 @@ class LoadUserData extends AbstractFixture implements OrderedFixtureInterface, C
          */
         $categoryDevelopment = new Category();
         $categoryDevelopment->setName('Development');
+        $categoryDevelopment->setDescription('Development');
         $categoryDevelopment->setTranslatableLocale('en');
         $manager->persist($categoryDevelopment);
         /**
@@ -39,6 +40,7 @@ class LoadUserData extends AbstractFixture implements OrderedFixtureInterface, C
          */
         $categoryPHP = new Category();
         $categoryPHP->setName('PHP');
+        $categoryPHP->setDescription('PHP');
         $categoryPHP->setParent($categoryDevelopment);
         $categoryPHP->setTranslatableLocale('en');
         $manager->persist($categoryPHP);
@@ -47,6 +49,7 @@ class LoadUserData extends AbstractFixture implements OrderedFixtureInterface, C
          */
         $categorySymfony2 = new Category();
         $categorySymfony2->setName('Symfony 2');
+        $categorySymfony2->setDescription('Symfony 2');
         $categorySymfony2->setParent($categoryDevelopment);
         $categorySymfony2->setTranslatableLocale('en');
         $manager->persist($categorySymfony2);
