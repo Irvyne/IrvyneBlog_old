@@ -124,6 +124,7 @@ class Article
     public function __construct()
     {
         $this->categories = new ArrayCollection();
+        $this->public = false;
     }
 
     /**
