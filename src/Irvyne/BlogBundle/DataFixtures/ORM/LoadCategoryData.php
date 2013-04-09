@@ -10,7 +10,7 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
 
 use Irvyne\BlogBundle\Entity\Category;
 
-class LoadUserData extends AbstractFixture implements OrderedFixtureInterface, ContainerAwareInterface
+class LoadCategoryData extends AbstractFixture implements OrderedFixtureInterface, ContainerAwareInterface
 {
     /**
      * @var ContainerInterface

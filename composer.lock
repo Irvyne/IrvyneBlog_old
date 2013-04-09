@@ -1782,12 +1782,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/leafo/lessphp.git",
-                "reference": "280b8bcce2256b0793feaed8a74568edcbab42ae"
+                "reference": "51aad6ef903bdcb18280ae81fb85016a078232a0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/leafo/lessphp/zipball/280b8bcce2256b0793feaed8a74568edcbab42ae",
-                "reference": "280b8bcce2256b0793feaed8a74568edcbab42ae",
+                "url": "https://api.github.com/repos/leafo/lessphp/zipball/51aad6ef903bdcb18280ae81fb85016a078232a0",
+                "reference": "51aad6ef903bdcb18280ae81fb85016a078232a0",
                 "shasum": ""
             },
             "type": "library",
@@ -1815,7 +1815,7 @@
             ],
             "description": "lessphp is a compiler for LESS written in PHP.",
             "homepage": "http://leafo.net/lessphp/",
-            "time": "2013-04-07 17:30:42"
+            "time": "2013-04-09 01:25:49"
         },
         {
             "name": "monolog/monolog",
